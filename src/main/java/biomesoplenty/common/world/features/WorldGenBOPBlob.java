@@ -12,7 +12,6 @@ public class WorldGenBOPBlob extends WorldGeneratorBOP
 {
     private Block field_150545_a;
     private int field_150544_b;
-    private static final String __OBFID = "CL_00000402";
 
     public WorldGenBOPBlob(Block p_i45450_1_, int p_i45450_2_)
     {
@@ -84,7 +83,7 @@ public class WorldGenBOPBlob extends WorldGeneratorBOP
             return true;
         }
     }
-    
+
 	@Override
     public void setupGeneration(World world, Random random, BOPBiome biome, String featureName, int x, int z)
 	{

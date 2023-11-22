@@ -11,7 +11,6 @@ import biomesoplenty.api.content.BOPCBlocks;
 
 public class WorldGenBOPJungle extends WorldGenHugeTrees
 {
-    private static final String __OBFID = "CL_00000420";
 
     public WorldGenBOPJungle(boolean p_i45456_1_, int p_i45456_2_, int p_i45456_3_, int p_i45456_4_, int p_i45456_5_)
     {

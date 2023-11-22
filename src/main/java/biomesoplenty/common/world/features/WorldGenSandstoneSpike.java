@@ -12,7 +12,6 @@ import biomesoplenty.common.world.generation.WorldGeneratorBOP;
 
 public class WorldGenSandstoneSpike extends WorldGeneratorBOP
 {
-    private static final String __OBFID = "CL_00000417";
 
     @Override
     public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5)
@@ -128,7 +127,7 @@ public class WorldGenSandstoneSpike extends WorldGeneratorBOP
             return true;
         }
     }
-    
+
     @Override
     public void setupGeneration(World world, Random random, BOPBiome biome, String featureName, int x, int z)
     {

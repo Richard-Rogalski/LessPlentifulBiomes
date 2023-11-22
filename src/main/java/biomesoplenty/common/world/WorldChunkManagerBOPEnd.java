@@ -14,7 +14,6 @@ public class WorldChunkManagerBOPEnd extends WorldChunkManager
     private BiomeGenBase biomeGenerator;
     /** The rainfall in the world */
     private float rainfall;
-    private static final String __OBFID = "CL_00000169";
 
     public WorldChunkManagerBOPEnd()
     {
