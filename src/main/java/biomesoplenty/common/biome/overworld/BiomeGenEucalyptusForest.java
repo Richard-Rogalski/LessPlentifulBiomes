@@ -19,25 +19,25 @@ import biomesoplenty.common.world.features.trees.WorldGenBulbTree;
 public class BiomeGenEucalyptusForest extends BOPOverworldBiome implements IBiomeFog
 {
     private static final Height biomeHeight = new Height(0.0F, 0.2F);
-	
+
 	public BiomeGenEucalyptusForest(int biomeID)
 	{
 		super(biomeID);
-		
+
         this.setHeight(biomeHeight);
         this.setColor(8704360);
         this.setTemperatureRainfall(0.9F, 1.0F);
-		
+
 		this.theBiomeDecorator.treesPerChunk = 5;
 		this.theBiomeDecorator.waterlilyPerChunk = 4;
-		
+
 		this.theBiomeDecorator.bopFeatures.bopLilyPerChunk = 4;
         this.theBiomeDecorator.bopFeatures.sproutsPerChunk = 2;
 		this.theBiomeDecorator.bopFeatures.bushesPerChunk = 1;
         this.theBiomeDecorator.bopFeatures.shrubsPerChunk = 1;
-		
+
         this.theBiomeDecorator.bopFeatures.bopGrassPerChunk = 12;
-        
+
         this.theBiomeDecorator.bopFeatures.weightedGrassGen.put(new WorldGenBOPTallGrass(Blocks.tallgrass, 1), 1D);
         this.theBiomeDecorator.bopFeatures.weightedGrassGen.put(new WorldGenBOPTallGrass(Blocks.tallgrass, 2), 2D);
         this.theBiomeDecorator.bopFeatures.weightedGrassGen.put(new WorldGenBOPTallGrass(BOPCBlocks.foliage, 1), 0.5D);
@@ -93,15 +93,15 @@ public class BiomeGenEucalyptusForest extends BOPOverworldBiome implements IBiom
 	 {
 		 return 6803026;
 	 }
-	 
+
 	public int getFogColour(int x, int y, int z)
 	{
 		return 14805212;
 	}
-	
+
     @Override
     public float getFogDensity(int x, int y, int z)
     {
-        return 0.5F;
+        return 0.55F;
     }
 }

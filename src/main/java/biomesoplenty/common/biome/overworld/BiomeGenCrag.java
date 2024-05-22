@@ -13,7 +13,7 @@ import biomesoplenty.common.configuration.BOPConfigurationMisc;
 public class BiomeGenCrag extends BOPOverworldBiome implements IBiomeFog
 {
 	private static final Height biomeHeight = new Height(2.0F, 3.0F);
-	
+
 	public BiomeGenCrag(int id)
 	{
 		super(id);
@@ -21,10 +21,10 @@ public class BiomeGenCrag extends BOPOverworldBiome implements IBiomeFog
         this.setHeight(biomeHeight);
         this.setColor(5209457);
         this.setTemperatureRainfall(1.0F, 0.0F);
-		
+
 		this.spawnableCreatureList.clear();
 		this.spawnableWaterCreatureList.clear();
-		
+
 		this.topBlock = BOPCBlocks.cragRock;
 		this.fillerBlock = BOPCBlocks.cragRock;
 		this.theBiomeDecorator.treesPerChunk = -999;
@@ -33,7 +33,7 @@ public class BiomeGenCrag extends BOPOverworldBiome implements IBiomeFog
 
 		this.waterColorMultiplier = 944693;
 	}
-	
+
 	@Override
     public void decorate(World world, Random random, int chunkX, int chunkZ)
     {
@@ -45,7 +45,7 @@ public class BiomeGenCrag extends BOPOverworldBiome implements IBiomeFog
             int x = chunkX + random.nextInt(16);
             int y = random.nextInt(28) + 4;
             int z = chunkZ + random.nextInt(16);
-            
+
             Block block = world.getBlock(x, y, z);
 
             if (block != null && block.isReplaceableOreGen(world, x, y, z, Blocks.stone))
@@ -54,23 +54,23 @@ public class BiomeGenCrag extends BOPOverworldBiome implements IBiomeFog
             }
         }
     }
-	
+
 	 @Override
 	 public int getSkyColorByTemp(float par1)
 	 {
 		 if (BOPConfigurationMisc.skyColors) return 4944498;
 		 else return super.getSkyColorByTemp(par1);
 	 }
-	
+
 	/**
 	 * Fog Color
 	 */
 	@Override
 	public int getFogColour(int x, int y, int z)
 	{
-		return 10514245;
+		return 0x303547;
 	}
-	 
+
     @Override
     public float getFogDensity(int x, int y, int z)
     {

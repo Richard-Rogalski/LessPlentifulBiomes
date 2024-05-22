@@ -10,18 +10,20 @@ public class BiomeGenBOPDesert extends BOPInheritedOverworldBiome implements IBi
 	public BiomeGenBOPDesert(int biomeID, BiomeGenBase inheritedBiome)
 	{
 		super(biomeID, inheritedBiome);
-		
+
         this.theBiomeDecorator.bopFeatures.tinyCactiPerChunk = 10;
         this.theBiomeDecorator.bopFeatures.generateQuicksand = true;
 	}
-	
+
 	@Override
 	public int getSkyColorByTemp(float par1)
 	{
-		if (BOPConfigurationMisc.skyColors) return 9359789;
+        // 9359789
+		if (BOPConfigurationMisc.skyColors)
+            return 0x4e7d85;
 		else return super.getSkyColorByTemp(par1);
 	}
-	
+
 
 	@Override
 	public int getFogColour(int x, int y, int z)
@@ -32,6 +34,6 @@ public class BiomeGenBOPDesert extends BOPInheritedOverworldBiome implements IBi
     @Override
     public float getFogDensity(int x, int y, int z)
     {
-        return 0.3F;
+        return 0.55F;
     }
 }

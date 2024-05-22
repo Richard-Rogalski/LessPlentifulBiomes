@@ -23,7 +23,7 @@ import biomesoplenty.common.world.features.trees.WorldGenDeadTree;
 public class BiomeGenOminousWoods extends BOPOverworldBiome implements IBiomeFog
 {
 	private static final Height biomeHeight = new Height(0.1F, 0.2F);
-	
+
 	public BiomeGenOminousWoods(int id)
 	{
 		super(id);
@@ -31,17 +31,17 @@ public class BiomeGenOminousWoods extends BOPOverworldBiome implements IBiomeFog
         this.setHeight(biomeHeight);
         this.setColor(4145489);
         this.setTemperatureRainfall(0.5F, 0.9F);
-		
+
 		spawnableMonsterList.clear();
 		spawnableCreatureList.clear();
 		spawnableWaterCreatureList.clear();
-		
+
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityCaveSpider.class, 5, 1, 2));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityEnderman.class, 10, 1, 4));
 		this.spawnableCaveCreatureList.add(new SpawnListEntry(EntityBat.class, 10, 8, 8));
-		
+
 		this.waterColorMultiplier = 1973030;
-		
+
 		this.theBiomeDecorator.treesPerChunk = 8;
 		this.theBiomeDecorator.grassPerChunk = 1;
 		this.theBiomeDecorator.flowersPerChunk = -999;
@@ -72,7 +72,7 @@ public class BiomeGenOminousWoods extends BOPOverworldBiome implements IBiomeFog
 	{
 		return random.nextInt(2) == 0 ? new WorldGenBOPTaiga2(BOPCBlocks.logs1, BOPCBlocks.leaves1, 2, 3, false, 14, 6, 0, -1) : (random.nextInt(6) == 0 ? new WorldGenDeadTree() : new WorldGenBOPSwampTree(BOPCBlocks.logs1, BOPCBlocks.leaves1, 2, 3, 5, 4, BOPCBlocks.treeMoss, -1));
 	}
-	
+
 	@Override
 	public void decorate(World world, Random random, int chunkX, int chunkZ)
 	{
@@ -93,7 +93,7 @@ public class BiomeGenOminousWoods extends BOPOverworldBiome implements IBiomeFog
             }
         }
 	}
-	
+
 	@Override
     public void genTerrainBlocks(World world, Random random, Block[] p_150573_3_, byte[] p_150573_4_, int p_150573_5_, int p_150573_6_, double p_150573_7_)
     {
@@ -115,14 +115,14 @@ public class BiomeGenOminousWoods extends BOPOverworldBiome implements IBiomeFog
 	{
 		return 4145489;
 	}
-	
+
 	@Override
 	public int getSkyColorByTemp(float par1)
 	{
 		if (BOPConfigurationMisc.skyColors) return 3420989;
 		else return super.getSkyColorByTemp(par1);
 	}
-	
+
 
 	@Override
 	public int getFogColour(int x, int y, int z)
@@ -133,6 +133,6 @@ public class BiomeGenOminousWoods extends BOPOverworldBiome implements IBiomeFog
     @Override
     public float getFogDensity(int x, int y, int z)
     {
-        return 0.145f;
+        return 0.3f;
     }
 }

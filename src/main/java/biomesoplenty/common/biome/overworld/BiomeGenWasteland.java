@@ -26,17 +26,17 @@ public class BiomeGenWasteland extends BOPOverworldBiome implements IBiomeFog
         this.setDisableRain();
         this.setColor(5919808);
         this.setTemperatureRainfall(1.0F, 0.05F);
-        
+
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
-        
+
         this.waterColorMultiplier = 15073024;
-        
+
         this.topBlock = BOPCBlocks.driedDirt;
         this.fillerBlock = BOPCBlocks.driedDirt;
         this.theBiomeDecorator.treesPerChunk = 0;
         this.theBiomeDecorator.grassPerChunk = 20;
-        
+
         this.theBiomeDecorator.bopFeatures.poisonLakesPerChunk = 10;
         this.theBiomeDecorator.bopFeatures.waterLakesPerChunk = 2;
         this.theBiomeDecorator.bopFeatures.wasteland1PerChunk = 1;
@@ -55,7 +55,7 @@ public class BiomeGenWasteland extends BOPOverworldBiome implements IBiomeFog
     {
         return new WorldGenDeadTree();
     }
-    
+
     @Override
 	public void decorate(World world, Random random, int chunkX, int chunkZ)
 	{
@@ -88,7 +88,7 @@ public class BiomeGenWasteland extends BOPOverworldBiome implements IBiomeFog
     {
         return 10067541;
     }
-    
+
     @Override
     public int getSkyColorByTemp(float par1)
     {
@@ -105,6 +105,6 @@ public class BiomeGenWasteland extends BOPOverworldBiome implements IBiomeFog
     @Override
     public float getFogDensity(int x, int y, int z)
     {
-        return 0.3F;
+        return 0.55F;
     }
 }

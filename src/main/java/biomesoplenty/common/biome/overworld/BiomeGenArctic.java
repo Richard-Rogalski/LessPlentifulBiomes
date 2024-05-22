@@ -13,25 +13,25 @@ import biomesoplenty.common.biome.BOPOverworldBiome;
 public class BiomeGenArctic extends BOPOverworldBiome implements IBiomeFog
 {
 	private static final Height biomeHeight = new Height(0F, 0F);
-	
+
 	public BiomeGenArctic(int id)
 	{
 		super(id);
-		
+
         this.setHeight(biomeHeight);
         this.setEnableSnow();
         this.setColor(14540253);
         this.setTemperatureRainfall(0.05F, 0.5F);
-		
+
 		this.spawnableCreatureList.clear();
-		
+
 		this.theBiomeDecorator.treesPerChunk = -999;
 		this.theBiomeDecorator.flowersPerChunk = -999;
 		this.theBiomeDecorator.grassPerChunk = -999;
 		this.theBiomeDecorator.sandPerChunk = -999;
 		this.theBiomeDecorator.sandPerChunk2 = -999;
 	}
-	
+
 	@Override
 	public void decorate(World world, Random random, int chunkX, int chunkZ)
 	{
@@ -43,7 +43,7 @@ public class BiomeGenArctic extends BOPOverworldBiome implements IBiomeFog
 			int x = chunkX + random.nextInt(16);
 			int y = random.nextInt(28) + 4;
 			int z = chunkZ + random.nextInt(16);
-			
+
 			Block block = world.getBlock(x, y, z);
 
 			if (block != null && block.isReplaceableOreGen(world, x, y, z, Blocks.stone) && BiomeUtils.oreWithMetaEnabled(8))
@@ -64,20 +64,20 @@ public class BiomeGenArctic extends BOPOverworldBiome implements IBiomeFog
 	{
 		return 11903827;
 	}
-	
-	
+
+
 	@Override
 	public int getFogColour(int x, int y, int z)
 	{
 		return 12638463;
 	}
-	
-	
-	
+
+
+
     @Override
     public float getFogDensity(int x, int y, int z)
     {
-        return 0.4F;
+        return 0.55F;
     }
-    
+
 }
