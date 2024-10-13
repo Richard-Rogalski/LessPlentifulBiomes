@@ -43,7 +43,7 @@ public class GenLayerShoreBOP extends GenLayer
 
                     if (l1 != BiomeGenBase.ocean.biomeID && i2 != BiomeGenBase.ocean.biomeID && j2 != BiomeGenBase.ocean.biomeID && k2 != BiomeGenBase.ocean.biomeID)
                     {
-                        outputBiomeIds[j1 + i1 * width] = landBiomeId;
+                        outputBiomeIds[j1 + i1 * width] = 128;//rrogalski
                     }
                     else
                     {

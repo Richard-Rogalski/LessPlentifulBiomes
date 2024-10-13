@@ -64,7 +64,7 @@ public class GenLayerBiomeBOP extends GenLayerBiome
         }
 	}
 	
-    @Override
+    /*@Override
 	public int[] getInts(int x, int z, int width, int length)
     {
         int[] inputBiomeIDs = this.parent.getInts(x, z, width, length);
@@ -150,7 +150,7 @@ public class GenLayerBiomeBOP extends GenLayerBiome
         }
 
         return outputBiomeIDs;
-    }
+    }*/
     
     private int getRandomValidList()
     {

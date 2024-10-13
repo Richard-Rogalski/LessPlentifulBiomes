@@ -9,7 +9,7 @@ public class BiomeSizeEventHandler
 	@SubscribeEvent
 	public void onDetermineBiomeSize(BiomeSize event)
 	{
-		if (event.worldType.getWorldTypeName() == "BIOMESOP" || event.worldType.getWorldTypeName() == "ATG") 
+		if (event.worldType.getWorldTypeName() == "BIOMESOP" || event.worldType.getWorldTypeName() == "ATG" || event.worldType.getWorldTypeName() == "GeneratorSplicer" || event.worldType.getWorldTypeName() == "MetaWorldType") 
 		{
 			event.newSize = (byte)BOPConfigurationTerrainGen.biomeSize;
 

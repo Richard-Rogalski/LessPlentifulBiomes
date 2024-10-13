@@ -28,6 +28,7 @@ import net.minecraft.world.gen.layer.GenLayerShore;
 import net.minecraft.world.gen.layer.GenLayerSmooth;
 import net.minecraft.world.gen.layer.GenLayerVoronoiZoom;
 import net.minecraft.world.gen.layer.GenLayerZoom;
+import net.minecraft.world.WorldType;
 
 public class WorldChunkManagerBOP extends WorldChunkManager
 {
@@ -35,17 +36,19 @@ public class WorldChunkManagerBOP extends WorldChunkManager
 	{
 		super();
 		
-        GenLayer[] agenlayer = GenLayerBOP.initializeAllBiomeGenerators(world.getSeed(), world.getWorldInfo().getTerrainType());
-        agenlayer = getModdedBiomeGenerators(world.getWorldInfo().getTerrainType(), world.getSeed(), agenlayer);
+		System.out.println(world.getWorldInfo().getTerrainType());
+        GenLayer[] agenlayer = GenLayerBOP.initializeAllBiomeGenerators(world.getSeed(), WorldType.parseWorldType("BIOMESOP"));
+		System.out.println(world.getWorldInfo().getTerrainType());
+        //agenlayer = getModdedBiomeGenerators(WorldType.parseWorldType("BIOMESOP"), world.getSeed(), agenlayer);
         ObfuscationReflectionHelper.setPrivateValue(WorldChunkManager.class, this, agenlayer[0], "genBiomes", "field_76944_d");
         ObfuscationReflectionHelper.setPrivateValue(WorldChunkManager.class, this, agenlayer[1], "biomeIndexLayer", "field_76945_e");
 	}
 	
-    @Override
+    /*@Override
 	public ChunkPosition findBiomePosition(int x, int z, int radius, List biomesToSpawnIn, Random random)
     {
     	int spawnSearchRadius = BOPConfigurationMisc.spawnSearchRadius;
     	
     	return super.findBiomePosition(x, z, spawnSearchRadius, biomesToSpawnIn, random);
-    }
+    }*/
 }

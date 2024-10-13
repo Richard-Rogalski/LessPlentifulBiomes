@@ -40,7 +40,7 @@ public class BOPEntities
 		EntityRegistry.registerModEntity(EntityJungleSpider.class, "JungleSpider", EntID++, BiomesOPlenty.instance, 80, 3, true);
 		registerEntityEgg(EntityJungleSpider.class, 5147192, 11013646);
 		if(mobSpawns && BOPConfigurationMain.spawnJungleSpider)
-			EntityRegistry.addSpawn(EntityJungleSpider.class, 8, 1, 3, EnumCreatureType.monster, BOPCBiomes.bambooForest, BiomeGenBase.jungle, BOPCBiomes.tropicalRainforest, BOPCBiomes.oasis, BOPCBiomes.tropics, BOPCBiomes.mangrove, BOPCBiomes.sacredSprings, BOPCBiomes.rainforest);
+			EntityRegistry.addSpawn(EntityJungleSpider.class, 8, 1, 3, EnumCreatureType.monster, BOPCBiomes.bambooForest, BiomeGenBase.jungle, BOPCBiomes.tropicalRainforest, BOPCBiomes.sacredSprings, BOPCBiomes.rainforest);
 
 		EntityRegistry.registerModEntity(EntityRosester.class, "Rosester", EntID++, BiomesOPlenty.instance, 80, 3, true);
 		registerEntityEgg(EntityRosester.class, 14831439, 16756224);
@@ -50,7 +50,7 @@ public class BOPEntities
 		EntityRegistry.registerModEntity(EntityGlob.class, "Glob", EntID++, BiomesOPlenty.instance, 80, 3, true);
 		registerEntityEgg(EntityGlob.class, 6836276, 8414787);
 		if(mobSpawns && BOPConfigurationMain.spawnGlob)
-			EntityRegistry.addSpawn(EntityGlob.class, 1, 1, 1, EnumCreatureType.creature, BOPCBiomes.deadSwamp, BOPCBiomes.fen, BOPCBiomes.moor, BOPCBiomes.quagmire, BOPCBiomes.sludgepit, BiomeGenBase.swampland);
+			EntityRegistry.addSpawn(EntityGlob.class, 1, 1, 1, EnumCreatureType.creature, BiomeGenBase.swampland);
 
 		EntityRegistry.registerModEntity(EntityPhantom.class, "Phantom", EntID++, BiomesOPlenty.instance, 80, 3, true);
 		registerEntityEgg(EntityPhantom.class, 4472140, 2499368);
